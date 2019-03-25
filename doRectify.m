@@ -52,7 +52,8 @@ function  [I1r, I2r, bb1, bb2, Pn1, Pn2, H1, H2]  = doRectify(img1, img2, calibr
         
     end
     
-   [I1r,I2r, bb1, bb2] = imrectify(I1,I2,H1,H2,'crop');
+%    [I1r,I2r, bb1, bb2] = imrectify(I1,I2,H1,H2,'crop');
+[I1r,I2r, bb1, bb2] = imrectify(I1,I2,H1,H2,'valid');
     
     % xshift =  bb1(1)  - bb2(1)
     

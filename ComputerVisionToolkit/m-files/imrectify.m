@@ -36,8 +36,10 @@ function [I1r,I2r, bb1, bb2]  = imrectify(I1,I2,H1,H2,rif)
     end
     
     % let's do the warp
-    I1r = imwarp(single(rgb2gray(I1)),H1, bb1);
-    I2r = imwarp(single(rgb2gray(I2)),H2, bb2);
+%     I1r = imwarp(single(rgb2gray(I1)),H1, bb1);
+%     I2r = imwarp(single(rgb2gray(I2)),H2, bb2);
+    I1r = imwarp(single(I1),H1, bb1);
+    I2r = imwarp(single(I2),H2, bb2);
     
 end
 
